@@ -1,0 +1,62 @@
+@rem:75rem;
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    /* iPhoneX */
+    padding-top: constant(safe-area-inset-top);
+    padding-right: constant(safe-area-inset-right);
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-left: constant(safe-area-inset-left);
+}
+a {
+    /* 去除移动端点击标签默认出现的背景遮罩框 */
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
+}
+input{
+    /* 解决IOS下表单元素圆角问题 */
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+}
+/* 音乐按钮 */
+.musicWrap{
+    position: absolute;
+    top: 15/@rem;
+    right: 15/@rem;
+    width: 68/@rem;
+    height: 68/@rem;
+    z-index: 9999;
+
+    .music{
+      width: 68/@rem;
+      height: 68/@rem;
+    }
+    .music.on{
+        background: url(../images/audio2.png) no-repeat 0 0;
+        background-size: cover;
+
+        -webkit-animation: rotate 2s infinite linear;
+        animation: rotate 2s infinite linear
+    }
+    .music.off{
+        background: url(../images/audio2.png) no-repeat -76/@rem 0;
+        background-size: cover;
+    }
+}
+@keyframes rotate {
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
+}
+@-webkit-keyframes rotate {
+    0% {-webkit-transform:rotate(0deg);}
+    100% {-webkit-transform:rotate(360deg);}
+}

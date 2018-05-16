@@ -1,0 +1,22 @@
+@rem:75rem;
+.arrow {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 38/@rem;
+    margin: auto;
+    width: 38/@rem;
+    height: 19/@rem;
+    z-index: 999;
+    -webkit-animation: start 1.5s infinite ease-in-out;
+}
+@-webkit-keyframes start {
+    0%,30% {opacity: 0;-webkit-transform: translate(0,10/@rem);}
+    60% {opacity: 1;-webkit-transform: translate(0,0);}
+    100% {opacity: 0;-webkit-transform: translate(0,-8/@rem);}
+}
+@keyframes start {
+    0%,30% {opacity: 0;transform: translate(0,10/@rem);}
+    60% {opacity: 1;transform: translate(0,0);}
+    100% {opacity: 0;transform: translate(0,-8/@rem);}
+}

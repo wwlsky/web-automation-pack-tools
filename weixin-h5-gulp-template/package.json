@@ -1,0 +1,26 @@
+{
+  "name": "gulp-h5",
+  "version": "1.0.0",
+  "description": "微信H5开发Gulp打包模板",
+  "author": "梵天 502832965@qq.com",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-concat": "^2.6.0",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-less": "^3.1.0",
+    "gulp-make-css-url-version": "0.0.13",
+    "gulp-rev": "^7.1.2",
+    "gulp-rev-collector": "^1.0.5",
+    "gulp-run-sequence": "^0.3.2",
+    "gulp-uglify": "^2.0.0"
+  }
+}

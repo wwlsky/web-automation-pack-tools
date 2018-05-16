@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta content="no-cache" http-equiv="pragma">
+    <meta content="0" http-equiv="expires">
+    <meta content="telephone=no, address=no, email=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes"> 
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>微信H5开发Gulp打包模板</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+    <script>
+        var html = document.getElementsByTagName('html')[0];
+        var pageWidth = html.getBoundingClientRect().width;
+        html.style.fontSize = pageWidth / 10 + 'px';
+    </script>
+</head>
+<body>
+    
+    <div class="loading"></div>
+
+    <div class="musicWrap">
+        <audio src="assets/mp3/music.mp3" autoplay="autoplay" loop="loop"></audio>
+        <div class="music on"></div>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
