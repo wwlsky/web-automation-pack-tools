@@ -41,6 +41,11 @@ module.exports = {
                         }
                     }
                 ]
+            },
+			{
+				// 解决html中直接使用img标签src加载图片不打包的问题
+                test: /\.(htm|html)$/i,
+                use: 'html-withimg-loader'
             }
         ]
     },
