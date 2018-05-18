@@ -43,9 +43,20 @@ module.exports = {
                 ]
             },
 			{
-				// 解决html中直接使用img标签src加载图片不打包的问题
-                test: /\.(htm|html)$/i,
-                use: 'html-withimg-loader'
+                test: /\.html$/,
+                use: [
+                    {
+                        // 解决html中直接使用img标签src加载图片不打包的问题 
+                        // <%= htmlWebpackPlugin.options.title %> 无法使用
+                        loader: 'html-loader',
+                        options: {
+                            attrs: ['img:src'],
+                            minimize: true,
+                            removeComments: true,       // 去除注释
+                            collapseWhitespace: true    // 去除空格
+                        }
+                    }
+                ]
             }
         ]
     },
@@ -57,10 +68,10 @@ module.exports = {
             template: 'src/index.html',
             inject: 'body',     // true | false | 'head' | 'body'
             //favicon: 'favicon.ico',
-            minify: {
+            /* minify: {
                 removeComments: true,       // 去除注释
                 collapseWhitespace: true    // 去除空格
-            }
+            } */
         })
     ]
 }
